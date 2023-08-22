@@ -9,7 +9,7 @@ y en el mismo orden.
 lista = ["casa", "perro", "pato", "gato"]
 
 # COMPLETAR - INICIO
-
+tupla = ("casa", "perro", "pato", "gato")
 # COMPLETAR - FIN
 
 assert tupla == ("casa", "perro", "pato", "gato")
@@ -23,7 +23,9 @@ y en el mismo orden.
 tupla = "casa", "perro", "pato", "gato", "tenedor"
 
 # COMPLETAR - INICIO
-
+lista = []
+lista.extend(tupla)
+lista.sum
 # COMPLETAR - FIN
 
 assert lista == ["casa", "perro", "pato", "gato", "tenedor"]
@@ -36,7 +38,7 @@ Desempaquetar la siguiente tupla en las variables a, b y c
 tupla = ("primer", 25, [1, 2, 3])
 
 # COMPLETAR - INICIO
-
+a,b,c = tupla
 # COMPLETAR - FIN
 
 assert a == "primer" and b == 25 and c == [1, 2, 3]
@@ -49,7 +51,14 @@ Desempaquetar la siguiente tupla y luego sumar sus valores
 tupla = (87, 98, 35, 67, 4, 9)
 
 # COMPLETAR - INICIO
-
+valor1,valor2,valor3,valor4,valor5,valor6 = tupla
+total = valor1 + valor2 + valor3 + valor4 +valor5 + valor6
+""""
+ALTERNATIVA
+total = 0
+for numero in tupla:
+    total += numero
+"""
 # COMPLETAR - FIN
 
 assert total == 300
@@ -63,6 +72,8 @@ Restricción: Utilizar f-Strings.
 lista = ["esta", "mañana", "sali", "a", "correr"]
 
 # COMPLETAR - INICIO
+valor1,valor2,valor3,valor4,valor5 = lista
+string_concatenado = f'{valor1} {valor2} {valor3} {valor4} {valor5}'
 
 # COMPLETAR - FIN
 
@@ -77,7 +88,7 @@ Restricción: Utilizar desempaquetado con comodines
 tupla = (73, 45, 344, 3434, 2)
 
 # COMPLETAR - INICIO
-
+primer, *rest = tupla
 # COMPLETAR - FIN
 
 assert primer == 73
@@ -91,9 +102,9 @@ Restricción: Utilizar desempaquetado con comodines
 lista = [73, 45, 344, 3434, 2]
 
 # COMPLETAR - INICIO
-
+numero_1, *rest, numero_2 = lista
+suma = numero_1 + numero_2
 # COMPLETAR - FIN
-
 assert suma == 75
 
 
@@ -107,6 +118,8 @@ tupla = ("anoche", "fui", "a", "la", "fiesta", "pero", "no", "pude", "entrar")
 
 # COMPLETAR - INICIO
 
+valor1,valor2,valor3,valor4,valor5, *rest = tupla
+string_concatenado = f'{valor1} {valor2} {valor3} {valor4} {valor5}'
 # COMPLETAR - FIN
 
 assert string_concatenado == "anoche fui a la fiesta"
