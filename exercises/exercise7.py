@@ -25,7 +25,6 @@ tupla = "casa", "perro", "pato", "gato", "tenedor"
 # COMPLETAR - INICIO
 lista = []
 lista.extend(tupla)
-lista.sum
 # COMPLETAR - FIN
 
 assert lista == ["casa", "perro", "pato", "gato", "tenedor"]
@@ -51,14 +50,9 @@ Desempaquetar la siguiente tupla y luego sumar sus valores
 tupla = (87, 98, 35, 67, 4, 9)
 
 # COMPLETAR - INICIO
-valor1,valor2,valor3,valor4,valor5,valor6 = tupla
-total = valor1 + valor2 + valor3 + valor4 +valor5 + valor6
-""""
-ALTERNATIVA
 total = 0
 for numero in tupla:
     total += numero
-"""
 # COMPLETAR - FIN
 
 assert total == 300
